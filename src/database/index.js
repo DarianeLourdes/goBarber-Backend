@@ -25,10 +25,17 @@ class Database {
 
   mongo() {
     this.mongoConnection = mongoose.connect(
-      'mongodb://localhost:27017/gobarber',
+      'mongodb+srv://goBarber:goBarber@cluster0-xxmov.mongodb.net/test?retryWrites=true&w=majority',
       { useNewUrlParser: true, useUnifiedTopology: true }
     );
   }
 }
+//   mongo() {
+//     this.mongoConnection = mongoose.connect(
+//       'mongodb://localhost:27017/gobarber',
+//       { useNewUrlParser: true, useUnifiedTopology: true }
+//     );
+//   }
+// }
 
 export default new Database();
