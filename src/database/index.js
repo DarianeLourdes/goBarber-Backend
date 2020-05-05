@@ -24,10 +24,10 @@ class Database {
   }
 
   mongo() {
-    this.mongoConnection = mongoose.connect(
-      'mongodb+srv://goBarber:goBarber@cluster0-xxmov.mongodb.net/test?retryWrites=true&w=majority',
-      { useNewUrlParser: true, useUnifiedTopology: true }
-    );
+    this.mongoConnection = mongoose.connect(process.env.MONGO_URL, {
+      useNewUrlParser: true,
+      useUnifiedTopology: true,
+    });
   }
 }
 //   mongo() {
